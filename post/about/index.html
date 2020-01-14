@@ -1,95 +1,92 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>雪落相思笺 | 瑞雪</title>
-<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966205551">
-<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<meta name="description" content="再见的人还会再见">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966728283">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://woshiruixue.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="雪落相思笺 | 瑞雪 - Atom Feed" href="https://woshiruixue.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-冬日的夜，斜倚轩窗，凝视着雪穿着洁白的曼纱，迈着轻盈的舞姿，随冬风翩翩起舞，朵朵冰晶，瓣瓣纯莹，在铅灰的天空下明亮、剔透、如蝶般翩跹着，将诗意和美好赋予了大地，与山河岁月浑然大化为一体。那雪花飘落间，似乎连时间都在那一刻流逝得轻柔起来。轻..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://woshiruixue.github.io">
-  <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966205551" alt="">
-  </a>
-  <h1 class="site-title">
-    瑞雪
-  </h1>
-  <p class="site-description">
-    再见的人还会再见
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://woshiruixue.github.io">
+        <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966728283" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://woshiruixue.github.io">
+        <h1 class="site-title">瑞雪</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              雪落相思笺
-            </h2>
-            <div class="post-info">
-              <span>
-                2019-01-25
-              </span>
-              <span>
-                5 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">雪落相思笺</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p><img src="https://woshiruixue.github.io/post-images/1578965570961.jpg" alt="" loading="lazy"><br>
+          </div>
+          <div class="post-content">
+            <p><img src="https://woshiruixue.github.io/post-images/1578965570961.jpg" alt="" loading="lazy"><br>
 冬日的夜，斜倚轩窗，凝视着雪穿着洁白的曼纱，迈着轻盈的舞姿，随冬风翩翩起舞，朵朵冰晶，瓣瓣纯莹，在铅灰的天空下明亮、剔透、如蝶般翩跹着，将诗意和美好赋予了大地，与山河岁月浑然大化为一体。那雪花飘落间，似乎连时间都在那一刻流逝得轻柔起来。轻倚在记忆的门楣，眺望心中那缕念，怀想眼眸间那抹暖，轻捻岁月里的温柔，执一卷相思，用温暖栽下一篱诗话。任这雪舞的浪漫，在每个温暖而甜蜜的日子，淡淡盛开，静静芬芳。<br>
 　　<br>
 　　静谧夜晚，伴一窗清幽，听一夜风雪。心怀一抹暖阳，将眸光倾注于你来时的路口，将心思开成一朵明媚的小花，为你绽放了最美的笑靥，婉约的絮语回味着往昔的温暖。而你的身影，仍在云端，隔着风月无边。而我的灵魂深处，无论思念，还是默守，我的生命里始终有你温润的气息。轻捻一瓣心香，雕刻你如初的模样，将你在我的心底安放。<br>
@@ -109,76 +106,57 @@
 　　<br>
 　　流年似水，却年年有痕，不变的真情，缱绻于心湖涟漪着生动。我的爱依然在原地，无论忧伤，还是喜悦，都在流年深处安静盛开。唯有将你缱绻成墨，漫画一场花香满径的相约。因了这份守候，每一个简单的日子，都变得明媚如初。相信所有的爱都宛如冰雪中的种子，在某一个春日的早晨醒来，开枝散叶，枝繁叶茂，绽放出幸福的花朵来。今生相遇，别问归期，你一直都在我梦里依稀……</p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://woshiruixue.github.io/post/hello-gridea">
+            <a class="purple-link" href="https://woshiruixue.github.io/post/hello-gridea">
               <h3 class="post-title">
-                一阙红尘词，相思泪满天
+                下一篇：一阙红尘词，相思泪满天
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">再见的人还会再见</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

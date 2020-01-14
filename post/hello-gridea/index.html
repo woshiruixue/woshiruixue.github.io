@@ -1,61 +1,122 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>一阙红尘词，相思泪满天 | 瑞雪</title>
-<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966205551">
-<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<meta name="description" content="再见的人还会再见">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966728283">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://woshiruixue.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="一阙红尘词，相思泪满天 | 瑞雪 - Atom Feed" href="https://woshiruixue.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="谁吻我之眸，遮我半世哀伤！谁怜之我苦，挡我一生风雨！谁揽我入怀，慰我柔弱之肩！谁擦我之泪，洗我半生悲凉！谁携我之手，驱我尘世凄苦！谁晓我之心，疼我一生痴情！谁惜我之情，除我红尘迷离！谁疼我之伤，免我孤寂凄凉！心之苦，爱之痛！情之深，伤之真！..." />
-    <meta name="keywords" content="Gridea" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://woshiruixue.github.io">
-  <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966205551" alt="">
-  </a>
-  <h1 class="site-title">
-    瑞雪
-  </h1>
-  <p class="site-description">
-    再见的人还会再见
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://woshiruixue.github.io">
+        <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966728283" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://woshiruixue.github.io">
+        <h1 class="site-title">瑞雪</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://woshiruixue.github.io/post-images/hello-gridea.jpg')">
+            </div>
+          
+          <h2 class="post-title">一阙红尘词，相思泪满天</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2018-12-12</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://woshiruixue.github.io/tag/gFhUNYcSY">
+                    Gridea
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>谁吻我之眸，遮我半世哀伤！谁怜之我苦，挡我一生风雨！谁揽我入怀，慰我柔弱之肩！谁擦我之泪，洗我半生悲凉！谁携我之手，驱我尘世凄苦！谁晓我之心，疼我一生痴情！谁惜我之情，除我红尘迷离！谁疼我之伤，免我孤寂凄凉！心之苦，爱之痛！情之深，伤之真！痴女泪不尽，真爱为何人！<br>
+　　??题记</p>
+<p>漆黑的夜，寂寞的心，伤悲与心痛时时缠绕着我！凄凉的眼泪为了谁，谁又能懂我的忧伤与心碎。当思念成为一种习惯，我再也无法将它从身体里清除，它已经成了我身体的一部分。当孤寂浸入心房，寂寞啃噬无奈的渴望，内心依然抑制不住的去想你，麻木的心真的感觉到很痛，很痛。我爱你爱得总是那么的悲伤，是你让我的文字刻满了泪痕，充满了心酸。一种莫名的忧愁始终缠绕在我的心头，心中的伤感总是挥之不去，管不住自己思念你的那颗心。</p>
+<p>在无数个想你的夜晚，我就是这样在孤寂难眠，孤苦无助中度过。明知道该放下了，该忘记了，该结束了，可是我就是做不到忘记，做不到放下。一段没有结果的爱，一段没有结局的情，我不知道我是舍不得，还是不舍得。是忘不掉，还是不想忘，是放不下，还是不想放。人与人之间靠的就是一个缘字，相遇是一种缘，相识是一种缘，相知是一种缘，相爱是一种缘，相守也是一种缘。一生中总有一个人，让你心痛，让你刻骨铭心。总有一段情一直住在心里，却告别在生活里。忘不掉的是回忆，继续的是生活。</p>
+<p>夜已经很深了，寂寞与伤痛，蔓延在我的全身，思念你是一种最美丽的伤痛，就像是一场无法醒来的梦，也是一种撕心裂肺的痛，也许爱一个人真的不需要任何理由。有时我在想，也许时间可以冲淡一切，没想到对你的思念越深，却爱得越深。是我不够好，还是人心本是善变的？我守得住那个不变的承诺，却守不住那颗善变的心，我不明白为什么人世间要有那么多的悲欢离合呢？</p>
+<p>当爱变成了一种伤害，当我的存在成了你幸福的障碍。尽管有一万分的不愿意，我也只能选择离开。我只能把往事尘封，把爱深埋，我选择坚强，不是说我可以挡住悲伤，而是无可耐何！</p>
+<p>🙄有时候我总在想，如果没有遇见你，我是不是会一直很简单，很快乐的生活着，我不会因为想你食不知味，不会因为牵挂你而坐卧不宁，不会因为担心你而胡思乱想，不会因为在乎你而纠结于心。可是如果人生真的可以重来，我还是会选择遇见你，如果没有你，我不懂得爱情，如果没有遇见你，我快不快乐，开不开心，又有什么意义？因为你，我的人生才如此美丽如此精彩。</p>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">再见的人还会再见</div>
   <div class="social-container">
     
       
@@ -69,100 +130,26 @@
       
     
   </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              一阙红尘词，相思泪满天
-            </h2>
-            <div class="post-info">
-              <span>
-                2018-12-12
-              </span>
-              <span>
-                3 min read
-              </span>
-              
-                <a href="https://woshiruixue.github.io/tag/gFhUNYcSY" class="post-tag">
-                  # Gridea
-                </a>
-              
-            </div>
-            
-              <img class="post-feature-image" src="https://woshiruixue.github.io/post-images/hello-gridea.jpg" alt="">
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>谁吻我之眸，遮我半世哀伤！谁怜之我苦，挡我一生风雨！谁揽我入怀，慰我柔弱之肩！谁擦我之泪，洗我半生悲凉！谁携我之手，驱我尘世凄苦！谁晓我之心，疼我一生痴情！谁惜我之情，除我红尘迷离！谁疼我之伤，免我孤寂凄凉！心之苦，爱之痛！情之深，伤之真！痴女泪不尽，真爱为何人！<br>
-　　??题记</p>
-<p>漆黑的夜，寂寞的心，伤悲与心痛时时缠绕着我！凄凉的眼泪为了谁，谁又能懂我的忧伤与心碎。当思念成为一种习惯，我再也无法将它从身体里清除，它已经成了我身体的一部分。当孤寂浸入心房，寂寞啃噬无奈的渴望，内心依然抑制不住的去想你，麻木的心真的感觉到很痛，很痛。我爱你爱得总是那么的悲伤，是你让我的文字刻满了泪痕，充满了心酸。一种莫名的忧愁始终缠绕在我的心头，心中的伤感总是挥之不去，管不住自己思念你的那颗心。</p>
-<p>在无数个想你的夜晚，我就是这样在孤寂难眠，孤苦无助中度过。明知道该放下了，该忘记了，该结束了，可是我就是做不到忘记，做不到放下。一段没有结果的爱，一段没有结局的情，我不知道我是舍不得，还是不舍得。是忘不掉，还是不想忘，是放不下，还是不想放。人与人之间靠的就是一个缘字，相遇是一种缘，相识是一种缘，相知是一种缘，相爱是一种缘，相守也是一种缘。一生中总有一个人，让你心痛，让你刻骨铭心。总有一段情一直住在心里，却告别在生活里。忘不掉的是回忆，继续的是生活。</p>
-<p>夜已经很深了，寂寞与伤痛，蔓延在我的全身，思念你是一种最美丽的伤痛，就像是一场无法醒来的梦，也是一种撕心裂肺的痛，也许爱一个人真的不需要任何理由。有时我在想，也许时间可以冲淡一切，没想到对你的思念越深，却爱得越深。是我不够好，还是人心本是善变的？我守得住那个不变的承诺，却守不住那颗善变的心，我不明白为什么人世间要有那么多的悲欢离合呢？</p>
-<p>当爱变成了一种伤害，当我的存在成了你幸福的障碍。尽管有一万分的不愿意，我也只能选择离开。我只能把往事尘封，把爱深埋，我选择坚强，不是说我可以挡住悲伤，而是无可耐何！</p>
-<p>🙄有时候我总在想，如果没有遇见你，我是不是会一直很简单，很快乐的生活着，我不会因为想你食不知味，不会因为牵挂你而坐卧不宁，不会因为担心你而胡思乱想，不会因为在乎你而纠结于心。可是如果人生真的可以重来，我还是会选择遇见你，如果没有你，我不懂得爱情，如果没有遇见你，我快不快乐，开不开心，又有什么意义？因为你，我的人生才如此美丽如此精彩。</p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
-        </div>
-
-        
-
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

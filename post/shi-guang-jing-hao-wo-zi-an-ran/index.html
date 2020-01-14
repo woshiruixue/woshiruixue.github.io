@@ -1,97 +1,92 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>时光静好，我自安然 | 瑞雪</title>
-<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966205551">
-<link href="https://cdn.remixicon.com/releases/v2.1.0/remixicon.css" rel="stylesheet">
+<meta name="description" content="再见的人还会再见">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966728283">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://woshiruixue.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="时光静好，我自安然 | 瑞雪 - Atom Feed" href="https://woshiruixue.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="时光静好，我自安然
-  岁月磨平了青春的棱角，少了一份青涩懵懂，多了一份成熟稳重，洗尽铅华，归于平淡。只喜欢一个人静坐于于午后空庭，看一本小书，轻抿一口香茗，铺笺执笔书写繁华过往。时光微凉，起起落落，红尘散场，我自安然。
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-   心香一瓣，..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://woshiruixue.github.io">
-  <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966205551" alt="">
-  </a>
-  <h1 class="site-title">
-    瑞雪
-  </h1>
-  <p class="site-description">
-    再见的人还会再见
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://woshiruixue.github.io">
+        <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966728283" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://woshiruixue.github.io">
+        <h1 class="site-title">瑞雪</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              时光静好，我自安然
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-01-14
-              </span>
-              <span>
-                6 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">时光静好，我自安然</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-01-14</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>时光静好，我自安然</p>
+          </div>
+          <div class="post-content">
+            <p>时光静好，我自安然</p>
 <pre><code>  岁月磨平了青春的棱角，少了一份青涩懵懂，多了一份成熟稳重，洗尽铅华，归于平淡。只喜欢一个人静坐于于午后空庭，看一本小书，轻抿一口香茗，铺笺执笔书写繁华过往。时光微凉，起起落落，红尘散场，我自安然。
 
    心香一瓣，辗转于文字中，书写自已的点点滴滴，把忧伤过往折叠成花瓣，心花如雨落，淅淅沥沥，翩翩起舞。厌倦了红尘的喧嚣，世事的沉浮，独觅一个清净的角落，用文字记载着自己的心事。曾经跌宕起伏的岁月，已经归于平淡，如一弯明月，隽永当时年少。人总是会成长，那些困难磨练我们的心志，风雨洗礼我们的青春，感谢曾经让我们痛彻心扉的人和事，它教会了我们淡看世态人心，淡忘旖旎风光。再回首，物是人非，恍然如梦，留下一纸难以续写的忧伤遗憾，庆幸的是，多年之后它还能在我们平淡的生活中激起小小浪花。繁华岁月抵不过似水流年，往事如烟，再刻骨铭心的爱恋也终究被岁月冲淡，多一份淡然处之，少一份牵挂；多一份隐逸清然，少一丝羁绊，闲看庭前花开花落，漫看天际云起云舒，如此便好！
@@ -109,76 +104,57 @@
 
   多年之后，依然依偎着一缕墨香，从容不迫地禅坐在一方小屋中，守着一塌书，一圃花草，一盏青灯，一窗明月，细细品味物是人非，沧海桑田。惟愿流年不负初心，安然独守梦境。</code></pre>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://woshiruixue.github.io/post/about">
+            <a class="purple-link" href="https://woshiruixue.github.io/post/about">
               <h3 class="post-title">
-                雪落相思笺
+                下一篇：雪落相思笺
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">再见的人还会再见</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
