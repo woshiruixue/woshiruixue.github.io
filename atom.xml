@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://woshiruixue.github.io</id>
     <title>瑞雪</title>
-    <updated>2020-01-14T08:48:02.938Z</updated>
+    <updated>2020-01-14T08:49:28.441Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://woshiruixue.github.io"/>
     <link rel="self" href="https://woshiruixue.github.io/atom.xml"/>
-    <subtitle>想见的人还会再相逢</subtitle>
+    <subtitle>相见的人还会再相逢</subtitle>
     <logo>https://woshiruixue.github.io/images/avatar.png</logo>
     <icon>https://woshiruixue.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 瑞雪</rights>
