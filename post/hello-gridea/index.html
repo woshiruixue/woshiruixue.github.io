@@ -1,105 +1,333 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>一阙红尘词，相思泪满天 | 瑞雪</title>
-<meta name="description" content="再见的人还会再见">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578966728283">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://woshiruixue.github.io/favicon.ico?v=1578967314903">
 <link rel="stylesheet" href="https://woshiruixue.github.io/styles/main.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
 
-
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <meta name="description" content="一阙红尘词，相思泪满天" />
+    <meta name="keywords" content="Gridea" />
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://woshiruixue.github.io">
-        <img class="avatar" src="https://woshiruixue.github.io/images/avatar.png?v=1578966728283" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://woshiruixue.github.io">
-        <h1 class="site-title">瑞雪</h1>
-      </a>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<div class=" ">
+  <header class="header">
+    <div class="blog-header" id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>瑞雪</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle"></p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            <li class="nav-item ">
+              
+                <a href="/">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/archives">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/tags">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            <li class="nav-item ">
+              
+                <a href="/post/about">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          <li class="nav-item">
+            <a>
+              <i class="fa fa-search"></i> 搜索
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
+  </header>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
       
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
+      <div class="section-layout ">
+        <div class="section-layout-wrapper">
+          
+<div class="sidebar">
+    <div class="sidebar-box right-motion" id="sidebar">
       
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
       
+      <div class="sidebar-body " id="sidebar_body">
         
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
+          <div class="sidebar-wrapper">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="https://woshiruixue.github.io/images/avatar.png"/>
+    <p class="site-author-name">瑞雪</p>
+    <p class="site-description right-motion">再见的人还会再见</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
         
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
+        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
     </div>
   </div>
-</transition>
+  
+  
+    
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc;">
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+          
+            <a href="">
+              <i class="fa fa-github-alt"></i> Github
+            </a>
+          
+          
+            <a href="">
+              <i class="fa fa-graduation-cap"></i> 掘金
+            </a>
+          
+          
+            <a href="">
+              <i class="fa fa-book"></i> 简书
+            </a>
+          
+          
+            <a href="" title="">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+          
+          
+            <a class="social-img" href="">
+              <img src="" />
+              <i class="fa fa-wechat "></i> 微信
+            </a>
+          
+          
+            <a class="social-img" href="">
+              <img src="" />
+              <i class="fa fa-qq"></i> QQ
+            </a>
+          
+          
+            <a class="social-img" href="">
+              <i class="icon-douban">豆</i>
+              <span class="douban-span">豆瓣</span>
+            </a>
+          
+      </div>
+    </div>
+  
+
+</div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
 
 
-      <div class="content-container">
-        <div class="post-detail">
+  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('mist')) {
+    let hasFix = false;
+    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+    window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box">
+            <div class="section post">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://woshiruixue.github.io/post/hello-gridea">
+      一阙红尘词，相思泪满天
+    </a>
+  </h1>
+  <div class="post-meta">
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2018-12-12</span>
+    </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
           
-            <div class="feature-container" style="background-image: url('https://woshiruixue.github.io/post-images/hello-gridea.jpg')">
-            </div>
+            <a href="https://woshiruixue.github.io/tag/gFhUNYcSY">
+              <span>Gridea</span>
+            </a>
           
-          <h2 class="post-title">一阙红尘词，相思泪满天</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2018-12-12</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://woshiruixue.github.io/tag/gFhUNYcSY">
-                    Gridea
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>谁吻我之眸，遮我半世哀伤！谁怜之我苦，挡我一生风雨！谁揽我入怀，慰我柔弱之肩！谁擦我之泪，洗我半生悲凉！谁携我之手，驱我尘世凄苦！谁晓我之心，疼我一生痴情！谁惜我之情，除我红尘迷离！谁疼我之伤，免我孤寂凄凉！心之苦，爱之痛！情之深，伤之真！痴女泪不尽，真爱为何人！<br>
+        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>3分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>863<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <p>谁吻我之眸，遮我半世哀伤！谁怜之我苦，挡我一生风雨！谁揽我入怀，慰我柔弱之肩！谁擦我之泪，洗我半生悲凉！谁携我之手，驱我尘世凄苦！谁晓我之心，疼我一生痴情！谁惜我之情，除我红尘迷离！谁疼我之伤，免我孤寂凄凉！心之苦，爱之痛！情之深，伤之真！痴女泪不尽，真爱为何人！<br>
 　　??题记</p>
 <p>漆黑的夜，寂寞的心，伤悲与心痛时时缠绕着我！凄凉的眼泪为了谁，谁又能懂我的忧伤与心碎。当思念成为一种习惯，我再也无法将它从身体里清除，它已经成了我身体的一部分。当孤寂浸入心房，寂寞啃噬无奈的渴望，内心依然抑制不住的去想你，麻木的心真的感觉到很痛，很痛。我爱你爱得总是那么的悲伤，是你让我的文字刻满了泪痕，充满了心酸。一种莫名的忧愁始终缠绕在我的心头，心中的伤感总是挥之不去，管不住自己思念你的那颗心。</p>
 <p>在无数个想你的夜晚，我就是这样在孤寂难眠，孤苦无助中度过。明知道该放下了，该忘记了，该结束了，可是我就是做不到忘记，做不到放下。一段没有结果的爱，一段没有结局的情，我不知道我是舍不得，还是不舍得。是忘不掉，还是不想忘，是放不下，还是不想放。人与人之间靠的就是一个缘字，相遇是一种缘，相识是一种缘，相知是一种缘，相爱是一种缘，相守也是一种缘。一生中总有一个人，让你心痛，让你刻骨铭心。总有一段情一直住在心里，却告别在生活里。忘不掉的是回忆，继续的是生活。</p>
@@ -107,49 +335,171 @@
 <p>当爱变成了一种伤害，当我的存在成了你幸福的障碍。尽管有一万分的不愿意，我也只能选择离开。我只能把往事尘封，把爱深埋，我选择坚强，不是说我可以挡住悲伤，而是无可耐何！</p>
 <p>🙄有时候我总在想，如果没有遇见你，我是不是会一直很简单，很快乐的生活着，我不会因为想你食不知味，不会因为牵挂你而坐卧不宁，不会因为担心你而胡思乱想，不会因为在乎你而纠结于心。可是如果人生真的可以重来，我还是会选择遇见你，如果没有你，我不懂得爱情，如果没有遇见你，我快不快乐，开不开心，又有什么意义？因为你，我的人生才如此美丽如此精彩。</p>
 
-          </div>
-        </div>
-
-        
-      </div>
-
-      
-
-      <div class="site-footer">
-  <div class="slogan">再见的人还会再见</div>
-  <div class="social-container">
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      瑞雪
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://woshiruixue.github.io/post/hello-gridea" title="一阙红尘词，相思泪满天">一阙红尘词，相思泪满天</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
+      <a href="https://woshiruixue.github.io/tag/gFhUNYcSY"># Gridea</a>
     
   </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://woshiruixue.github.io/atom.xml" target="_blank">RSS</a>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" href="https://woshiruixue.github.io/post/about">雪落相思笺</a class="nav-pc-next">
+        <a class="nav-mobile-prev" href="https://woshiruixue.github.io/post/about">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+    </div>
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
+      <div>Copy From<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+    </div>
+  </footer>
+  
+  
+  <div class=" back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
 </div>
 
+<script>
 
-    </div>
-    <script type="application/javascript">
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
 
-hljs.initHighlightingOnLoad()
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(body.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = body.scrollTop / (body.scrollHeight - body.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
 
+  // 动态调整站点概览高度
+  if (back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px;';
+  }
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            console.log(rightMotions)
+            window.Velocity(rightMotions, 'transition.slideRightIn',{
+            });
+          }
+        })
+        window.Velocity(viewport, {
+          paddingRight: RIGHT_MOVE_DIS
+        } ,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, {
+          paddingRight: '0px'
+        } ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
 </script>
-
-
-
-
+    </div>
   </body>
+  <script src="/media/js/motion.js"></script>
 </html>
