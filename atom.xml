@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://woshiruixue.github.io</id>
     <title>瑞雪</title>
-    <updated>2020-01-14T01:40:54.064Z</updated>
+    <updated>2020-01-14T01:43:39.513Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://woshiruixue.github.io"/>
     <link rel="self" href="https://woshiruixue.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://woshiruixue.github.io/images/avatar.png</logo>
     <icon>https://woshiruixue.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 瑞雪</rights>
+    <entry>
+        <title type="html"><![CDATA[时光静好，我自安然]]></title>
+        <id>https://woshiruixue.github.io/post/shi-guang-jing-hao-wo-zi-an-ran</id>
+        <link href="https://woshiruixue.github.io/post/shi-guang-jing-hao-wo-zi-an-ran">
+        </link>
+        <updated>2020-01-14T01:41:51.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[雪落相思笺]]></title>
         <id>https://woshiruixue.github.io/post/about</id>
